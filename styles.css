@@ -32,7 +32,9 @@ header {
 /* Navbar Sizing */
 .navbar {
     display: flex;
-    gap: 20px; /* Space between buttons */
+    justify-content: space-between;
+    align-items: center; /* Ensure vertical centering */
+    padding: 20px;
 }
 
 .nav-btn {
@@ -41,10 +43,12 @@ header {
     padding: 15px 30px;
     border-radius: 50px;
     font-size: 23px;
-    font-weight: bold; /* Make text bolder (optional) */
-    text-decoration: none; /* Remove underline from links */
-    text-align: center; /* Center the text inside the button */
-    display: inline-block; /* Ensure it's styled like a button */
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    display: inline-flex; /* Allow proper alignment */
+    align-items: center; /* Vertically center the text */
+    justify-content: center; /* Horizontally center the text */
     border: none;
     cursor: pointer;
 }
@@ -53,8 +57,17 @@ header {
     background-color: #e04e01; /* Darken on hover */
 }
 
+/* Link inside nav-btn */
+.catalog-link {
+    color: black;
+    text-decoration: none; /* Remove underline */
+    display: inline-block;
+    font-weight: bold;
+}
 
-
+.catalog-link:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
 
 /* About Us Section Positioning */
 main {
@@ -68,7 +81,6 @@ main {
     margin-bottom: 40px;
     align-items: flex-start; /* Ensure proper alignment of text and image */
 }
-
 
 .about-text {
     width: 45%;
@@ -108,6 +120,7 @@ main {
     margin: 10px 0; /* Increased spacing between items */
 }
 
+/* Styles for the View Catalog Button */
 .product-range-btn {
     background-color: #FF5001;
     color: black;
@@ -115,14 +128,18 @@ main {
     border-radius: 50px;
     font-size: 18px;
     margin-top: 20px;
+    text-decoration: none; /* Remove underline */
+    display: inline-block;
+    text-align: center;
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
 }
 
 .product-range-btn:hover {
     background-color: #e04e01;
+    color: white; /* Optional: Change text color on hover */
 }
 
-/* Contact Us Section */
 /* Contact Us Section */
 .contact-us {
     background-color: white;
@@ -177,7 +194,6 @@ main {
 .submit-btn:hover {
     background-color: #e04e01; /* Hover effect */
 }
-
 
 /* Footer */
 footer {
